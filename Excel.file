@@ -1,0 +1,13 @@
+1.Populate ticket_created_at 
+
+=XLOOKUP(A2, ticket!E:E, ticket!B:B)
+
+2a.Same Day 
+=INT(B2)=INT(C2) 
+
+2b.Same Hour 
+=AND(INT(B2)=INT(C2), HOUR(B2)=HOUR(C2)) 
+
+3.Outlet-wise Count 
+
+=COUNTIFS(E:E, outlet_id, F:F, TRUE)
