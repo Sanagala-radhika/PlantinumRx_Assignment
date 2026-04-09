@@ -1,0 +1,19 @@
+1.  Minutes-Human readable 
+
+def convert_minutes(minutes):
+    hours = minutes // 60
+    mins = minutes % 60
+    return f"{hours} hrs {mins} minutes"
+
+print(convert_minutes(130))
+
+2.Remove duplicates(loop) 
+
+def remove_duplicates(s):
+    result = ""
+    for ch in s:
+        if ch not in result:
+            result += ch
+    return result
+
+print(remove_duplicates("programming"))
